@@ -1,39 +1,6 @@
 import React, { Component } from 'react'
 import api from '../api'
 
-import styled from 'styled-components'
-
-const Title = styled.h1.attrs({
-    className: 'h1',
-})``
-
-const Wrapper = styled.div.attrs({
-    className: 'form-group',
-})`
-    margin: 0 30px;
-`
-
-const Label = styled.label`
-    margin: 5px;
-`
-
-const InputText = styled.input.attrs({
-    className: 'form-control',
-})`
-    margin: 5px;
-`
-
-const Button = styled.button.attrs({
-    className: `btn btn-primary`,
-})`
-    margin: 15px 15px 15px 5px;
-`
-
-const CancelButton = styled.a.attrs({
-    className: `btn btn-danger`,
-})`
-    margin: 15px 15px 15px 5px;
-`
 
 class MoviesUpdate extends Component {
     constructor(props) {
@@ -94,18 +61,20 @@ class MoviesUpdate extends Component {
     render() {
         const { name, rating, time } = this.state
         return (
-            <Wrapper>
-                <Title>Create Movie</Title>
+            <div className="form-group">
+                <h1 className="h1">Create Movie</h1>
 
-                <Label>Name: </Label>
-                <InputText
+                <label>Name: </label>
+                <input 
+                    className="form-control"
                     type="text"
                     value={name}
                     onChange={this.handleChangeInputName}
                 />
 
-                <Label>Rating: </Label>
-                <InputText
+                <label>Rating: </label>
+                <input
+                    className="form-control"
                     type="number"
                     step="0.1"
                     lang="en-US"
@@ -116,16 +85,17 @@ class MoviesUpdate extends Component {
                     onChange={this.handleChangeInputRating}
                 />
 
-                <Label>Time: </Label>
-                <InputText
+                <label>Time: </label>
+                <input
+                    className="form-control"
                     type="text"
                     value={time}
                     onChange={this.handleChangeInputTime}
                 />
 
-                <Button onClick={this.handleUpdateMovie}>Update Movie</Button>
-                <CancelButton href={'/movies/list'}>Cancel</CancelButton>
-            </Wrapper>
+                <button className="btn btn-primary" onClick={this.handleUpdateMovie}>Update Movie</button>
+                <a className="btn btn-danger" href={'/movies/list'}>Cancel</a>
+            </div>
         )
     }
 }

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Chivo';
+    src: url('../fonts/Chivo-Regular.ttf');
+}
+
+body {
+    font-family: 'Chivo' !important;
+}
+
+$primary: #10d48e;
+$secondary: #132a3a;
+$info: #ffffff;
+
+@import "bootstrap";

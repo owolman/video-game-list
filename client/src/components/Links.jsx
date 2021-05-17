@@ -1,40 +1,23 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
 
-const Collapse = styled.div.attrs({
-    className: 'collpase navbar-collapse',
-})``
-
-const List = styled.div.attrs({
-    className: 'navbar-nav mr-auto',
-})``
-
-const Item = styled.div.attrs({
-    className: 'collpase navbar-collapse',
-})``
 
 class Links extends Component {
     render() {
         return (
             <React.Fragment>
-                <Link to="/" className="navbar-brand">
-                    My first MERN Application
+                <Link to="/" className="navbar-brand link-secondary">
+                    Video Game List
                 </Link>
-                <Collapse>
-                    <List>
-                        <Item>
-                            <Link to="/movies/list" className="nav-link">
-                                List Movies
+                <div className="collapse navbar-collapse">
+                    <div className="navbar-nav mr-auto">
+                        <div className="collapse navbar-collapse">
+                            <Link to="/movies/list" className="nav-link link-secondary">
+                                Login
                             </Link>
-                        </Item>
-                        <Item>
-                            <Link to="/movies/create" className="nav-link">
-                                Create Movie
-                            </Link>
-                        </Item>
-                    </List>
-                </Collapse>
+                        </div>
+                    </div>
+                </div>
             </React.Fragment>
         )
     }
