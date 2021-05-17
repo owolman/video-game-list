@@ -4,7 +4,7 @@ import logo from '../res/logo.png'
 class Logo extends Component {
     render() {
         return (
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="https://youtube.com">
                  <img src={logo} width="50" height="50" alt="" />
             </a>
         )

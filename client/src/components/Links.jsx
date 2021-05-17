@@ -12,7 +12,7 @@ class Links extends Component {
                 <div className="collapse navbar-collapse">
                     <div className="navbar-nav mr-auto">
                         <div className="collapse navbar-collapse">
-                            <Link to="/movies/list" className="nav-link link-secondary">
+                            <Link to="/" className="nav-link link-secondary">
                                 Login
                             </Link>
                         </div>

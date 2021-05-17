@@ -4,7 +4,7 @@ const cors = require('cors')
 const path = require('path')
 
 const db = require('./db')
-const movieRouter = require('./routes/movie-router')
+const movieRouter = require('./routes/user-router')
 
 const app = express()
 const apiPort = process.env.PORT || 5000
@@ -15,10 +15,6 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'client/build')))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-
-/*app.get('/', (req, res) => {
-    res.send('Video Game List')
-})*/
 
 app.use('/api', movieRouter)
 
