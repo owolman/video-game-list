@@ -11,8 +11,11 @@ function Links (props) {
             <div className="collapse navbar-collapse">
                 <div className="navbar-nav mr-auto">
                     <div className="collapse navbar-collapse">
-                        <Link to="/" className="nav-link link-secondary">
+                        <Link to="/login" className="nav-link link-secondary">
                             Login
+                        </Link>
+                        <Link to="/create" className="nav-link link-secondary">
+                            Create Account
                         </Link>
                     </div>
                 </div>
