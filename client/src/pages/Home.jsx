@@ -9,7 +9,7 @@ function Home (props) {
 
     return (
         <>
-            <button className="btn btn-primary" onClick={() => addUser}>Add User Test</button>
+            <button className="btn btn-primary" onClick={addUser}>Add User Test</button>
         </>
     )
 }
