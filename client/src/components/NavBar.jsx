@@ -1,18 +1,14 @@
-import React, { Component } from 'react'
-
+import React from 'react'
 import Logo from './Logo'
 import Links from './Links'
 
 
-class NavBar extends Component {
-    render() {
-        return (
-            <nav className="px-3 navbar navbar-expand-lg bg-primary">
-                <Logo />
-                <Links />
-            </nav>
-        )
-    }
+function NavBar (props) {
+    return (
+        <nav className="px-3 navbar navbar-expand-lg bg-primary">
+            <Logo />
+            <Links count={4} />
+        </nav>
+    )
 }
-
 export default NavBar
